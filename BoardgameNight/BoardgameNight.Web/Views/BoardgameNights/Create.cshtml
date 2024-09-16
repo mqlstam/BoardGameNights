@@ -1,8 +1,9 @@
-@model BoardgameNight.Domain.Entities.BoardgameNight
+@model BoardgameNight.Domain.Entities.BoardgameNightEvent
 
 <h1>Create Boardgame Night</h1>
 
 <form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="Date" class="control-label"></label>
         <input asp-for="Date" class="form-control" />
@@ -14,6 +15,38 @@
         <span asp-validation-for="Location" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="Address" class="control-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxPlayers" class="control-label"></label>
+        <input asp-for="MaxPlayers" class="form-control" />
+        <span asp-validation-for="MaxPlayers" class="text-danger"></span>
+    </div>
+    <div class="form-group form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" asp-for="IsAdultsOnly" /> @Html.DisplayNameFor(model => model.IsAdultsOnly)
+        </label>
+    </div>
+    <div class="form-group form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" asp-for="IsPotluck" /> @Html.DisplayNameFor(model => model.IsPotluck)
+        </label>
+    </div>
+    <div class="form-group">
+        <label asp-for="Boardgames" class="control-label"></label>
+        <select asp-for="Boardgames" asp-items="ViewBag.Boardgames" class="form-control" multiple></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="FoodOptions" class="control-label"></label>
+        <select asp-for="FoodOptions" asp-items="ViewBag.FoodOptions" class="form-control" multiple></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="DrinkOptions" class="control-label"></label>
+        <select asp-for="DrinkOptions" asp-items="ViewBag.DrinkOptions" class="form-control" multiple></select>
+    </div>
+    <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
 </form>
@@ -21,3 +54,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

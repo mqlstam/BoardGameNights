@@ -1,9 +1,15 @@
 using BoardgameNight.Domain.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BoardgameNight.Domain.Interfaces
 {
-    public interface IPersonRepository : IRepository<Person>
+    public interface IPersonRepository
     {
-        Task<Person?> GetByEmailAsync(string email);
+        Task<IEnumerable<Person>> GetAllAsync();
+        Task<Person> GetByIdAsync(int id);
+        Task AddAsync(Person person);
+        Task UpdateAsync(Person person);
+        Task DeleteAsync(int id);
     }
 }

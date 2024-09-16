@@ -18,12 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/Views/BoardgameNights/AttendanceHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRnYW1lTmlnaHRzL0F0dGVuZGFuY2VIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/Views/BoardgameNights/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRnYW1lTmlnaHRzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/Views/BoardgameNights/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRnYW1lTmlnaHRzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/Views/BoardgameNights/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9hcmRnYW1lTmlnaHRzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/Views/Shared/_BoardgameNightList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Cb2FyZGdhbWVOaWdodExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/Views/Shared/_Layout.cshtml]

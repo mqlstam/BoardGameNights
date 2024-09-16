@@ -22,23 +22,5 @@ namespace BoardgameNight.Domain.Entities
 
         // Domain validation
         public bool CanAddParticipant() => Participants.Count < MaxPlayers;
-
-        public bool CanAddParticipant(Person person)
-        {
-            return CanAddParticipant() && 
-                   (!IsAdultsOnly || person.IsAdult()) && 
-                   person.CanParticipateInNightOnDate(Date);
-        }
-
-        public bool CanBeModified() => Participants.Count == 0;
-
-        public void AddBoardgame(Boardgame boardgame)
-        {
-            Boardgames.Add(boardgame);
-            if (boardgame.IsAdultOnly)
-            {
-                IsAdultsOnly = true;
-            }
-        }
     }
 }

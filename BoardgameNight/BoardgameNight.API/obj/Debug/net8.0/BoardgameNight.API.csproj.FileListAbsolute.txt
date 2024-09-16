@@ -21,6 +21,7 @@
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/BoardgameNight.API.csproj.CoreCompileInputs.cache
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/BoardgameNight.API.MvcApplicationPartsAssemblyInfo.cs
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/BoardgameNight.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/BoardgameNight.API.sourcelink.json
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/staticwebassets.build.json
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/staticwebassets.development.json
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.API/obj/Debug/net8.0/staticwebassets/msbuild.BoardgameNight.API.Microsoft.AspNetCore.StaticWebAssets.props

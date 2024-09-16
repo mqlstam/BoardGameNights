@@ -1,0 +1,36 @@
+@model IEnumerable<BoardgameNight.Domain.Entities.Attendance>
+
+<h1>Attendance History</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Event Date</th>
+            <th>Participant</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var attendance in Model)
+        {
+            <tr>
+                <td>@attendance.Event.Date.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@attendance.Participant.Name</td>
+                <td>
+                    @if (attendance.HasAttended)
+                    {
+                        <span class="badge badge-success">Attended</span>
+                    }
+                    else if (attendance.IsNoShow)
+                    {
+                        <span class="badge badge-danger">No Show</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-warning">Not Checked In</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

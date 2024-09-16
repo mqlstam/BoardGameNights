@@ -1,11 +1,13 @@
+using System.Collections.Generic;
 using BoardgameNight.Domain.Entities;
 
 namespace BoardgameNight.Domain.Interfaces
 {
-    public interface IBoardgameNightRepository : IRepository<Entities.BoardgameNight>
+    public interface IBoardgameNightRepository
     {
-        Task<IEnumerable<Entities.BoardgameNight>> GetUpcomingNightsAsync();
-        Task<IEnumerable<Entities.BoardgameNight>> GetNightsByOrganizerAsync(int organizerId);
-        Task<IEnumerable<Entities.BoardgameNight>> GetNightsByParticipantAsync(int participantId);
+        IEnumerable<BoardgameNightEvent> GetAllBoardgameNights();
+        BoardgameNightEvent GetBoardgameNight(int id);
+        void AddBoardgameNight(BoardgameNightEvent boardgameNight);
+        void UpdateBoardgameNight(BoardgameNightEvent boardgameNight);
     }
 }

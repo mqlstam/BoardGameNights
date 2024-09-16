@@ -138,3 +138,4 @@
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/obj/Debug/net8.0/ref/BoardgameNight.Web.dll
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/obj/Debug/net8.0/BoardgameNight.Web.RazorAssemblyInfo.cache
 /Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/obj/Debug/net8.0/BoardgameNight.Web.RazorAssemblyInfo.cs
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Web/obj/Debug/net8.0/BoardgameNight.Web.sourcelink.json

@@ -1,0 +1,225 @@
+@model BoardgameNight.Domain.Entities.BoardgameNightEvent
+
+<h1>Boardgame Night Details</h1>
+
+<div>
+    <h4>@Model.Date.ToString("yyyy-MM-dd HH:mm") at @Model.Location</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Organizer</dt>
+        <dd class="col-sm-10">@Model.Organizer.Name</dd>
+        <dt class="col-sm-2">Address</dt>
+        <dd class="col-sm-10">@Model.Address</dd>
+        <dt class="col-sm-2">Max Players</dt>
+        <dd class="col-sm-10">@Model.MaxPlayers</dd>
+        <dt class="col-sm-2">Adults Only</dt>
+        <dd class="col-sm-10">@(Model.IsAdultsOnly ? "Yes" : "No")</dd>
+        <dt class="col-sm-2">Average Rating</dt>
+        <dd class="col-sm-10">@Model.AverageRating.ToString("F1") / 5.0</dd>
+    </dl>
+
+    <h5>Games</h5>
+    <ul>
+        @foreach (var game in Model.Boardgames)
+        {
+            <li>@game.Name (@game.Genre) - @(game.IsAdultOnly ? "18+" : "All ages")</li>
+        }
+    </ul>
+
+    @if (Model.IsPotluck)
+    {
+        <h4>Potluck Items</h4>
+        <ul>
+            @foreach (var item in Model.PotluckItems)
+            {
+                <li>@item.Name (Brought by @item.BroughtBy.Name)</li>
+            }
+        </ul>
+
+        <form asp-action="AddPotluckItem" asp-route-boardgameNightId="@Model.Id" method="post">
+            <div class="form-group">
+                <label for="Name">Item Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="Type">Type</label>
+                <select class="form-control" id="Type" name="Type">
+                    <option value="Food">Food</option>
+                    <option value="Drink">Drink</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Potluck Item</button>
+        </form>
+    }
+    else
+    {
+        <h5>Food Options</h5>
+        <ul>
+            @foreach (var food in Model.FoodOptions)
+            {
+                <li>@food.Name</li>
+            }
+        </ul>
+
+        <h5>Drink Options</h5>
+        <ul>
+            @foreach (var drink in Model.DrinkOptions)
+            {
+                <li>@drink.Name</li>
+            }
+        </ul>
+    }
+
+    <h5>Participants (@Model.Participants.Count / @Model.MaxPlayers)</h5>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var participant in Model.Participants)
+            {
+                var attendance = Model.Attendances.FirstOrDefault(a => a.Participant.Id == participant.Id);
+                <tr>
+                    <td>@participant.Name</td>
+                    <td>
+                        @if (attendance?.HasAttended == true)
+                        {
+                            <span class="badge badge-success">Checked In</span>
+                        }
+                        else if (attendance?.IsNoShow == true)
+                        {
+                            <span class="badge badge-danger">No Show</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-warning">Not Checked In</span>
+                        }
+                    </td>
+                    <td>
+                        @if (attendance?.HasAttended != true && attendance?.IsNoShow != true)
+                        {
+                            <form asp-action="MarkAttendance" asp-route-boardgameNightId="@Model.Id" asp-route-participantId="@participant.Id" asp-route-hasAttended="true" method="post" style="display: inline;">
+                                <button type="submit" class="btn btn-sm btn-success">Check In</button>
+                            </form>
+                            <form asp-action="MarkAttendance" asp-route-boardgameNightId="@Model.Id" asp-route-participantId="@participant.Id" asp-route-hasAttended="false" method="post" style="display: inline;">
+                                <button type="submit" class="btn btn-sm btn-danger">Mark No Show</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (Model.CanAddParticipant())
+    {
+        <form asp-action="Register" asp-route-boardgameNightId="@Model.Id" method="post">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    }
+    else
+    {
+        <p>This boardgame night is full.</p>
+    }
+
+    <h5>Reviews</h5>
+    @foreach (var review in Model.Reviews)
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                <h6 class="card-title">@review.Reviewer.Name - @review.Rating / 5</h6>
+                <p class="card-text">@review.Comment</p>
+            </div>
+        </div>
+    }
+
+    <h5>Add Review</h5>
+    <form asp-action="AddReview" asp-route-boardgameNightId="@Model.Id" method="post">
+        <div class="form-group">
+            <label for="Rating">Rating</label>
+            <select class="form-control" id="Rating" name="Rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Comment">Comment</label>
+            <textarea class="form-control" id="Comment" name="Comment" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
+</div>
+
+<div>
+@model BoardgameNight.Domain.Entities.BoardgameNightEvent
+
+<h1>Boardgame Night Details</h1>
+
+<div>
+    <h4>@Model.Date.ToString("yyyy-MM-dd HH:mm") at @Model.Location</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Organizer</dt>
+        <dd class="col-sm-10">@Model.Organizer.Name</dd>
+        <dt class="col-sm-2">Address</dt>
+        <dd class="col-sm-10">@Model.Address</dd>
+        <dt class="col-sm-2">Max Players</dt>
+        <dd class="col-sm-10">@Model.MaxPlayers</dd>
+        <dt class="col-sm-2">Adults Only</dt>
+        <dd class="col-sm-10">@(Model.IsAdultsOnly ? "Yes" : "No")</dd>
+    </dl>
+
+    <h5>Games</h5>
+    <ul>
+        @foreach (var game in Model.Boardgames)
+        {
+            <li>@game.Name (@game.Genre) - @(game.IsAdultOnly ? "18+" : "All ages")</li>
+        }
+    </ul>
+
+    <h5>Food Options</h5>
+    <ul>
+        @foreach (var food in Model.FoodOptions)
+        {
+            <li>@food.Name</li>
+        }
+    </ul>
+
+    <h5>Drink Options</h5>
+    <ul>
+        @foreach (var drink in Model.DrinkOptions)
+        {
+            <li>@drink.Name</li>
+        }
+    </ul>
+
+    <h5>Participants (@Model.Participants.Count / @Model.MaxPlayers)</h5>
+    <ul>
+        @foreach (var participant in Model.Participants)
+        {
+            <li>@participant.Name</li>
+        }
+    </ul>
+
+    @if (Model.CanAddParticipant())
+    {
+        <form asp-action="Register" asp-route-boardgameNightId="@Model.Id" method="post">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    }
+    else
+    {
+        <p>This boardgame night is full.</p>
+    }
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

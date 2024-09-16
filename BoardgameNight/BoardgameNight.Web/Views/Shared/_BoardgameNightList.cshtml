@@ -1,0 +1,27 @@
+@model IEnumerable<BoardgameNight.Domain.Entities.BoardgameNightEvent>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Organizer</th>
+            <th>Participants</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Date.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@item.Location</td>
+                <td>@item.Organizer.Name</td>
+                <td>@item.Participants.Count / @item.MaxPlayers</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

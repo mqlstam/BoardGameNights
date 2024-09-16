@@ -25,6 +25,9 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
 // Add Razor Pages (required for Identity UI)
 builder.Services.AddRazorPages();
 
+// Add this line to register the repository
+builder.Services.AddScoped<IBoardgameRepository, BoardgameRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,7 +48,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 app.MapRazorPages();
 
 app.Run();

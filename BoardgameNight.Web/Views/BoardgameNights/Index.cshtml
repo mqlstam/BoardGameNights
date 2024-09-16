@@ -1,0 +1,12 @@
+@model BoardgameNightIndexViewModel
+
+<h2>Board Game Nights</h2>
+
+<h3>All Nights</h3>
+<partial name="_BoardgameNightList" model="Model.AllNights" />
+
+<h3>Nights You're Participating In</h3>
+<partial name="_BoardgameNightList" model="Model.ParticipatingNights" />
+
+<h3>Nights You're Organizing</h3>
+<partial name="_BoardgameNightList" model="Model.OrganizedNights" />

@@ -1,0 +1,25 @@
+@model IEnumerable<BoardgameNightViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Organizer</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var night in Model)
+        {
+            <tr>
+                <td>@night.Date.ToShortDateString()</td>
+                <td>@night.Location</td>
+                <td>@night.OrganizerName</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@night.Id" class="btn btn-info">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
