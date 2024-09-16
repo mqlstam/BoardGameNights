@@ -1,0 +1,11 @@
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/BoardgameNight.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/BoardgameNight.Domain.AssemblyInfoInputs.cache
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/BoardgameNight.Domain.AssemblyInfo.cs
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/BoardgameNight.Domain.csproj.CoreCompileInputs.cache
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/bin/Debug/net8.0/BoardgameNight.Domain.deps.json
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/bin/Debug/net8.0/BoardgameNight.Domain.dll
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/bin/Debug/net8.0/BoardgameNight.Domain.pdb
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/BoardgameNight.Domain.dll
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/refint/BoardgameNight.Domain.dll
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/BoardgameNight.Domain.pdb
+/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Domain/obj/Debug/net8.0/ref/BoardgameNight.Domain.dll

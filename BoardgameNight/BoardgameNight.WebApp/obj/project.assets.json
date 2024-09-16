@@ -1,0 +1,115 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "BoardgameNight.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BoardgameNight.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BoardgameNight.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BoardgameNight.Application.dll": {}
+        }
+      },
+      "BoardgameNight.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BoardgameNight.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BoardgameNight.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BoardgameNight.Application/1.0.0": {
+      "type": "project",
+      "path": "../BoardgameNight.Application/BoardgameNight.Application.csproj",
+      "msbuildProject": "../BoardgameNight.Application/BoardgameNight.Application.csproj"
+    },
+    "BoardgameNight.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BoardgameNight.Domain/BoardgameNight.Domain.csproj",
+      "msbuildProject": "../BoardgameNight.Domain/BoardgameNight.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "BoardgameNight.Application >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/miquelstam/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.WebApp/BoardgameNight.WebApp.csproj",
+      "projectName": "BoardgameNight.WebApp",
+      "projectPath": "/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.WebApp/BoardgameNight.WebApp.csproj",
+      "packagesPath": "/Users/miquelstam/.nuget/packages/",
+      "outputPath": "/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.WebApp/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/miquelstam/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Application/BoardgameNight.Application.csproj": {
+              "projectPath": "/Users/miquelstam/BoardGameNights/BoardgameNight/BoardgameNight.Application/BoardgameNight.Application.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

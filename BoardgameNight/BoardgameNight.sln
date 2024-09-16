@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardgameNight.Domain", "BoardgameNight.Domain\BoardgameNight.Domain.csproj", "{C5BEF6D4-0279-4E05-A07A-421A1180433E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardgameNight.Application", "BoardgameNight.Application\BoardgameNight.Application.csproj", "{94CD8089-1B4C-426F-8474-AE315CE03D20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardgameNight.Infrastructure", "BoardgameNight.Infrastructure\BoardgameNight.Infrastructure.csproj", "{0A5F2D75-9DF0-4D4D-9A92-BEE971EF08B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardgameNight.WebApp", "BoardgameNight.WebApp\BoardgameNight.WebApp.csproj", "{58D35935-BB30-4BCB-A0B3-8AA388604CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardgameNight.API", "BoardgameNight.API\BoardgameNight.API.csproj", "{A78CEDBB-FC8A-403B-862A-1AF58C9FAA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardgameNight.Tests", "BoardgameNight.Tests\BoardgameNight.Tests.csproj", "{2B0422B6-808A-4AC5-8DA3-CA539D47D1F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5BEF6D4-0279-4E05-A07A-421A1180433E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5BEF6D4-0279-4E05-A07A-421A1180433E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5BEF6D4-0279-4E05-A07A-421A1180433E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5BEF6D4-0279-4E05-A07A-421A1180433E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CD8089-1B4C-426F-8474-AE315CE03D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CD8089-1B4C-426F-8474-AE315CE03D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CD8089-1B4C-426F-8474-AE315CE03D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CD8089-1B4C-426F-8474-AE315CE03D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5F2D75-9DF0-4D4D-9A92-BEE971EF08B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5F2D75-9DF0-4D4D-9A92-BEE971EF08B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5F2D75-9DF0-4D4D-9A92-BEE971EF08B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5F2D75-9DF0-4D4D-9A92-BEE971EF08B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D35935-BB30-4BCB-A0B3-8AA388604CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D35935-BB30-4BCB-A0B3-8AA388604CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D35935-BB30-4BCB-A0B3-8AA388604CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D35935-BB30-4BCB-A0B3-8AA388604CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78CEDBB-FC8A-403B-862A-1AF58C9FAA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78CEDBB-FC8A-403B-862A-1AF58C9FAA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78CEDBB-FC8A-403B-862A-1AF58C9FAA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78CEDBB-FC8A-403B-862A-1AF58C9FAA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B0422B6-808A-4AC5-8DA3-CA539D47D1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0422B6-808A-4AC5-8DA3-CA539D47D1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0422B6-808A-4AC5-8DA3-CA539D47D1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0422B6-808A-4AC5-8DA3-CA539D47D1F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
